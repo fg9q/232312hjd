@@ -1,0 +1,22 @@
+$imageUrl = "https://app.box.com/index.php?rm=box_download_shared_file&shared_name=hm4zg4010olb16wscp5dpoo1dt9tinti&file_id=f_2261362249491"
+$imagePath = "C:\Users\Public\wallpaper.jpg"
+
+try {
+    Invoke-WebRequest -Uri $imageUrl -OutFile $imagePath
+} catch {
+    exit 1
+}
+
+Add-Type -TypeDefinition @"
+using System;
+using System.Runtime.InteropServices;
+public class Wallpaper {
+    [DllImport("user32.dll", CharSet = CharSet.Auto)]
+    public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
+}
+"@
+
+try {
+    [Wallpaper]::SystemParametersInfo(20, 0, $imagePath, 0x01 -bor 0x02)
+} catch {
+}
